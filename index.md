@@ -1,12 +1,30 @@
-## Welcome to GitHub Pages
+# Spatially-sparse convolutional neural networks reproduction blog
 
-You can use the [editor on GitHub](https://github.com/xvllinihao/deeplearning-blog.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This blog documents the reproduction efforts to the paper "Spatially-sparse convolutional neural networks" by Benjamin Graham. The reproduction project is conducted as part of the course Deep Learning course (CS4240) at TU Delft.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this blog, we will briefly explain the architecture of the DeepCNet and the existing available code related to this paper ([link](https://github.com/btgraham/SparseConvNet)). As the existing code implements the spatially-sparse convolutional neural network with ResNet or VGG, we tried to make modifications to it to reproduce the DeepCNet as proposed in the paper. We applied the parameters used in the paper to see if the results can be reproduced, and we also adjusted the original parameters to see if there exists any performance improvement.
 
-### Markdown
+## Introduction
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Convolutional neural networks 
+
+## Model Architecture
+
+## Dataset
+
+## Existing available code
+
+## What we have done
+
+### Data Augmentation
+
+### Hyperparameter tuning
+
+### New dataset
+
+## Results
+
+## Discussion
 
 ```markdown
 Syntax highlighted code block
