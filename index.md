@@ -1,5 +1,7 @@
 # Spatially-sparse convolutional neural networks reproduction blog
 
+Athour: Li Xu: 5235952    Xinyue Chen:5212642
+
 This blog documents the reproduction efforts to the paper "Spatially-sparse convolutional neural networks" by Benjamin Graham. The reproduction project is conducted as part of the course Deep Learning course (CS4240) at TU Delft.
 
 In this blog, we will briefly explain the architecture of the DeepCNet and the existing available code related to this paper ([link](https://github.com/btgraham/SparseConvNet)). As the existing code implements the spatially-sparse convolutional neural network with ResNet or VGG, we tried to make modifications to it to reproduce the DeepCNet as proposed in the paper. We applied the parameters used in the paper to see if the results can be reproduced, and we also adjusted the original parameters to see if there exists any performance improvement.
@@ -68,18 +70,20 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 | Chinese_handwriting  | Affine            | 100           | 1.85%                 | 0.24%         |
 | Chinese_handwriting  | Translation       | 100           | 1.95%                 | 0.22%         |
 
+Our data augmentation operations didn't help to improve the performance. We guess it is because translation and affine cause some letters to become very similar to other letters, which leads to an increase in the error rate.
+
 ### Hyperparameter Tuning
 
-| Dataset              | Learning Rate | Training Epoch | Top1 Train Error Rate | Top1 Test Error Rate |
-| -------------------- | ------------- | -------------- | --------------------- | -------------------- |
-| Assamese_handwriting | 0.01          | 100            | 4.75%                 | 0.08%                |
-| Assamese_handwriting | 0.05          | 100            |                       |                      |
-| Assamese_handwriting | 0.1           | 100            | 1.94%                 | 0.12%                |
-| Chinese_handwriting  | 0.01          | 100            |                       |                      |
-| Chinese_handwriting  | 0.05          | 100            |                       |                      |
-| Chinese_handwriting  | 0.1           | 100            |                       |                      |
+| Dataset              | Learning Rate | Training Epoch          | Top1 Train Error Rate | Top1 Test Error Rate |
+| -------------------- | ------------- | ----------------------- | --------------------- | -------------------- |
+| Assamese_handwriting | 0.01          | 100                     | 4.75%                 | 0.08%                |
+| Assamese_handwriting | 0.05          | 100                     | 2.67%                 | 0.18%                |
+| Assamese_handwriting | 0.1           | 100                     | 1.94%                 | 0.12%                |
+| Chinese_handwriting  | 0.01          | 15(stop after converge) | 0.00%                 | 68.2%                |
+| Chinese_handwriting  | 0.05          | 15(stop after converge) | 0.00%                 | 30.01%               |
+| Chinese_handwriting  | 0.1           | 100                     | 1.70%                 | 0.18%                |
 
-
+As you can see, when we use the Chinese handwriting dataset to train the network with learning rate 0.01 and 0.05, it overfits the dataset and converges very fast.  Thus it is better to set a bigger initial learning rate when training.
 
 
 
