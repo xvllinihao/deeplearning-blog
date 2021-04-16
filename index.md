@@ -15,7 +15,7 @@ There are two parameters to describe the structure of DeepCNet (l,k): there are 
 
 The figure below shows a DeepCNet with $l=5$.
 
-![l= 5](\img\l=5.png)
+![l= 5](/img/l=5.png)
 
 
 
@@ -87,7 +87,7 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 The code can also generate a confusion matrix. 
 
-![confusion matrix](\img\confusion matrix.jpg)
+![confusion matrix](/img/confusion matrix.jpg)
 
 ## Reflection
 
