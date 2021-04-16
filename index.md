@@ -11,9 +11,9 @@ Convolutional neural networks are commonly used in deep learning tasks that invo
 ## Model Architecture
 The model described in the paper is called DeepCNet. Its main idea is to retain spatial information by applying slow max-pooling. It implements slow max-pooling by construct a deep CNN called DeepCNet and apply max-pooling after each convolution layer.
 
-There are two parameters to describe the structure of DeepCNet (l,k): there are $$l+1$$ layers with convolutional filters separated by $$l$$ layers of $$2\times 2$$ max-pooling, and there are $$nk$$ convolutional filters in the $$n^{th}$$ layer. As for activation function, ReLU is used for hidden layers and softmax is used for the output layer. The filter size of the first layer is $$3 \times 3$$, and for the rest of the layers it's $$2\times2$$.
+There are two parameters to describe the structure of DeepCNet (l,k): there are l layers with convolutional filters separated by **l** layers of  **2 x 2** max-pooling, and there are  ***nk*** convolutional filters in the **Nth**  layer. As for activation function, ReLU is used for hidden layers and softmax is used for the output layer. The filter size of the first layer is **3 x 3**, and for the rest of the layers it's **2 x 2**.
 
-The figure below shows a DeepCNet with $$l=5$$​.
+The figure below shows a DeepCNet with **l=5**​.
 
 ![l= 5](/img/l=5.png)
 
@@ -59,25 +59,25 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 ### Data Augmentation
 
-| Dataset              | Data Augmentation | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
-| -------------------- | ----------------- | ------------- | --------------- | ---------------- |
-| Assamese_handwriting | None              | 100           | 1.94%           | 0.12%            |
-| Assamese_handwriting | Affine            | 100           | 2.30%           | 0.30%            |
-| Assamese_handwriting | Translation       | 100           | 2.45%           | 0.32%            |
-| Chinese_handwriting  | None              | 100           | 1.70%           | 0.18%            |
-| Chinese_handwriting  | Affine            | 100           | 1.85%           | 0.24%            |
-| Chinese_handwriting  | Translation       | 100           | 1.95%           | 0.22%            |
+| Dataset              | Data Augmentation | Traning Epoch | Top1 Train Error Rate | Top Test Rate |
+| -------------------- | ----------------- | ------------- | --------------------- | ------------- |
+| Assamese_handwriting | None              | 100           | 1.94%                 | 0.12%         |
+| Assamese_handwriting | Affine            | 100           | 2.30%                 | 0.30%         |
+| Assamese_handwriting | Translation       | 100           | 2.45%                 | 0.32%         |
+| Chinese_handwriting  | None              | 100           | 1.70%                 | 0.18%         |
+| Chinese_handwriting  | Affine            | 100           | 1.85%                 | 0.24%         |
+| Chinese_handwriting  | Translation       | 100           | 1.95%                 | 0.22%         |
 
 ### Hyperparameter Tuning
 
-| Dataset              | Learning Rate | Training Epoch | Top1 Error Rate | Top 5 Error Rate |
-| -------------------- | ------------- | -------------- | --------------- | ---------------- |
-| Assamese_handwriting | 0.01          | 100            |                 |                  |
-| Assamese_handwriting | 0.05          | 100            |                 |                  |
-| Assamese_handwriting | 0.1           | 100            |                 |                  |
-| Chinese_handwriting  | 0.01          | 100            |                 |                  |
-| Chinese_handwriting  | 0.05          | 100            |                 |                  |
-| Chinese_handwriting  | 0.1           | 100            |                 |                  |
+| Dataset              | Learning Rate | Training Epoch | Top1 Train Error Rate | Top1 Test Error Rate |
+| -------------------- | ------------- | -------------- | --------------------- | -------------------- |
+| Assamese_handwriting | 0.01          | 100            | 4.75%                 | 0.08%                |
+| Assamese_handwriting | 0.05          | 100            |                       |                      |
+| Assamese_handwriting | 0.1           | 100            | 1.94%                 | 0.12%                |
+| Chinese_handwriting  | 0.01          | 100            |                       |                      |
+| Chinese_handwriting  | 0.05          | 100            |                       |                      |
+| Chinese_handwriting  | 0.1           | 100            |                       |                      |
 
 
 
