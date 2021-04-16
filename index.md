@@ -28,13 +28,15 @@ A dataset of online handwritten assamese characters by collecting samples from 4
 CASIA-OLHWDB1.1 dataset includes 3,755 GB2312-80 level-1 Chinese characters and 171 alphanumeric and symbols, written by 300 people. The total number of samples is 1174364.
 
 ## Code Implementation
-The writer of this paper made [his own implementation](https://github.com/facebookresearch/SparseConvNet/tree/master/sparseconvnet) open source . The existed implementation combined his later works like [Sparse 3D convolutional neural networks, BMVC 2015](http://arxiv.org/abs/1505.02890) and [Submanifold Sparse Convolutional Networks, 2017](https://arxiv.org/abs/1706.01307), thus the performance of the network is boosted compared to the description in the paper. 
+2. The writer of this paper made [his implementation](https://github.com/facebookresearch/SparseConvNet/tree/master/sparseconvnet) open source . The existed implementation combined his later works like [Sparse 3D convolutional neural networks, BMVC 2015](http://arxiv.org/abs/1505.02890) and [Submanifold Sparse Convolutional Networks, 2017](https://arxiv.org/abs/1706.01307). Thus the performance of the network is boosted compared to the description in the paper. 
 
-In the author's implementation, he used his self-developed submanifold convolution to replace the traditional convolution function.The main idea of submanifold convolution is that:
+   Because the writer has combined his later work, the code's network architecture is different from that described in the paper. The main differences are:
 
->Due to the spatial sparsity, a site in a hidden layer is active if any of the sites in the layer that it takes as input is active, and in each layer we can learn a ground state, which is the same for all inactive sites. This can greatly save the computational power, and it is implemented by calculating two matrices for each layer of the network during forward propagation: a feature matrix and a pointer matrix. The feature matrix consists of the feature vectors for each active spatial location in the layer and the ground state. The pointer matrix links each spatial location in the convolutional layer to the feature matrix, finding the corresponding features. 
+   1. In the author's implementation, he used his self-developed submanifold convolution to replace the traditional convolution function. The main idea of submanifold convolution is that:
 
-Besides, the author also apply ResNet and VGGNet on network achitecture to improve the performance of code.
+      > Due to the spatial sparsity, a site in a hidden layer is active if any of the areas in the layer that it takes as an input is active, and in each layer, we can learn a ground state, which is the same for all inactive sites. This can significantly save computational power, and it is implemented by calculating two matrices for each layer of the network during forward propagation: a feature matrix and a pointer matrix. The feature matrix consists of the feature vectors for each active spatial location in the layer and the ground state. The pointer matrix links each spatial location in the convolutional layer to the feature matrix, finding the corresponding features. 
+
+   2. The author applies ResNet and VGGNet to network architecture to improve the performance of code.
 
 
 ## What we have done
