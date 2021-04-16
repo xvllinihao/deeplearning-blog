@@ -62,27 +62,28 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 | Assamese_handwriting | None              | 100           | 1.94%           | 0.12%            |
 | Assamese_handwriting | Affine            | 100           | 2.30%           | 0.30%            |
 | Assamese_handwriting | Translation       | 100           | 2.45%           | 0.32%            |
-| Chinese_handwriting  | None              | 100           |                 |                  |
-| Chinese_handwriting  | Affine            | 100           |                 |                  |
-| Chinese_handwriting  | Translation       |               |                 |                  |
-
+| Chinese_handwriting  | None              | 100           | 1.70%           | 0.18%            |
+| Chinese_handwriting  | Affine            | 100           | 1.85%           | 0.24%            |
+| Chinese_handwriting  | Translation       | 100           | 1.95%           | 0.22%            |
 
 ### Hyperparameter Tuning
 
-| Dataset              | Learning Rate | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
-| -------------------- | ------------- | ------------- | --------------- | ---------------- |
-| Assamese_handwriting | 0.01          | 100           | 1.94%           | 0.12%            |
-| Assamese_handwriting | 0.05          | 100           | 2.30%           | 0.30%            |
-| Assamese_handwriting | 0.1           | 100           | 2.45%           | 0.32%            |
-| Chinese_handwriting  | 0.01          | 100           |                 |                  |
-| Chinese_handwriting  | 0.05          | 100           |                 |                  |
-| Chinese_handwriting  | 0.1           |               |                 |                  |
+| Dataset              | Learning Rate | Training Epoch | Top1 Error Rate | Top 5 Error Rate |
+| -------------------- | ------------- | -------------- | --------------- | ---------------- |
+| Assamese_handwriting | 0.01          | 100            |                 |                  |
+| Assamese_handwriting | 0.05          | 100            |                 |                  |
+| Assamese_handwriting | 0.1           | 100            |                 |                  |
+| Chinese_handwriting  | 0.01          | 100            |                 |                  |
+| Chinese_handwriting  | 0.05          | 100            |                 |                  |
+| Chinese_handwriting  | 0.1           | 100            |                 |                  |
+
+
 
 
 
 ### Confusion Matrix
 
-The code can also generate a confusion matrix. 
+The code can also generate a confusion matrix. Below is the confusion matrix of Assamese_handwriting dataset. Because it has 183 different classes, to visualize it clearly, we transfer the confusion matrix to a picture. In the picture, white points are point with the highest probabilities. As you can see the white points forms the diagonal of the matrix. This means, the predicted class is exactly the actual class. In another word, the test error is very low. 
 
 ![confusion matrix](/img/confusion-matrix.jpg)
 
