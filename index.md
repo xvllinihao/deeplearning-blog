@@ -68,6 +68,7 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 
 ### Hyperparameter Tuning
+
 | Dataset              | Learning Rate | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
 | -------------------- | ------------- | ------------- | --------------- | ---------------- |
 | Assamese_handwriting | 0.01          | 100           | 1.94%           | 0.12%            |
