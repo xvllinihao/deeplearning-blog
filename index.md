@@ -15,7 +15,7 @@ There are two parameters to describe the structure of DeepCNet (l,k): there are 
 
 The figure below shows a DeepCNet with $l=5$.
 
-![l= 5](\img\l=5.png)
+![l= 5](/img/l=5.png)
 
 
 
