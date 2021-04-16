@@ -1,6 +1,6 @@
 # Spatially-sparse convolutional neural networks reproduction blog
 
-Athour: Li Xu: 5235952    Xinyue Chen:5212642
+Athour: [Li Xu](L.Xu-11@student.tudelft.nl): 5235952    [Xinyue Chen](X.chen-36@student.tudelft.nl):5212642
 
 This blog documents the reproduction efforts to the paper "Spatially-sparse convolutional neural networks" by Benjamin Graham. The reproduction project is conducted as part of the course Deep Learning course (CS4240) at TU Delft.
 
