@@ -67,19 +67,15 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 | Chinese_handwriting  | Translation       |               |                 |                  |
 
 
-
-
-
-
 ### Hyperparameter Tuning
-| Dataset              | learning_rate | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
+| Dataset              | Learning Rate | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
 | -------------------- | ------------- | ------------- | --------------- | ---------------- |
-| Assamese_handwriting |               |               |                 |                  |
-| Assamese_handwriting |               |               |                 |                  |
-| Assamese_handwriting |               |               |                 |                  |
-| Chinese_handwriting  |               |               |                 |                  |
-| Chinese_handwriting  |               |               |                 |                  |
-| Chinese_handwriting  |               |               |                 |                  |
+| Assamese_handwriting | 0.01          | 100           | 1.94%           | 0.12%            |
+| Assamese_handwriting | 0.05          | 100           | 2.30%           | 0.30%            |
+| Assamese_handwriting | 0.1           | 100           | 2.45%           | 0.32%            |
+| Chinese_handwriting  | 0.01          | 100           |                 |                  |
+| Chinese_handwriting  | 0.05          | 100           |                 |                  |
+| Chinese_handwriting  | 0.1           |               |                 |                  |
 
 
 
