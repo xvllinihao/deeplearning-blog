@@ -15,7 +15,7 @@ There are two parameters to describe the structure of DeepCNet (l,k): there are 
 
 The figure below shows a DeepCNet with $l=5$.
 
-![](\img\l=5.png)
+![l= 5](\img\l=5.png)
 
 
 
@@ -36,8 +36,6 @@ In the author's implementation, he used his self-developed submanifold convoluti
 
 Besides, the author also apply ResNet and VGGNet on network achitecture to improve the performance of code.
 
-<!-- This is the spatially sparse convolutional layer that will be referred to in the rest of the section (implemented in `scn.Convolution`in the available code). -->
-
 
 ## What we have done
 Because we have limited time, our works are mainly based on the existed code implementation. 
@@ -49,8 +47,6 @@ The existed work doesn't provide us with the data augmentation part. So we imple
 
 The existed code can read Assamese_handwriting and Chinese_handwriting dataset as tensors. So we just do affine and translation operations on the tensors we get. This could be done by using PIL: first convert the tensors to PIL image objects, use `RandomAffine` method from `torchvison.transforms` to do translation and affine operations. Then convert the processed image objects back to tensors and feed them to the network. 
 
-<!-- The existed implementation although behaves very well, it lacks comments and documents. It is difficult to understand how  -->
-
 ### Hyperparameter Tuning
 We also tried to change the learning rate of the network to improve the performance of the network.
 
@@ -61,25 +57,29 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 ### Data Augmentation
 
+| Dataset              | Data Augmentation | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
+| -------------------- | ----------------- | ------------- | --------------- | ---------------- |
+| Assamese_handwriting | None              | 100           | 1.94%           | 0.12%            |
+| Assamese_handwriting | Affine            | 100           | 2.30%           | 0.30%            |
+| Assamese_handwriting | Translation       | 100           | 2.45%           | 0.32%            |
+| Chinese_handwriting  | None              | 100           |                 |                  |
+| Chinese_handwriting  | Affine            | 100           |                 |                  |
+| Chinese_handwriting  | Translation       |               |                 |                  |
 
-|  Dataset| Data Augmentation| Traning Epoch |Top1 Error Rate|Top 5 Error Rate|
-| -------- | -------- | -------- |-------|-----|
-| Assamese_handwriting    | None    |  100    |1.94%|0.12%
-| Assamese_handwriting    | Affine    |   100   | 2.30% |0.30%
-| Assamese_handwriting    | Translation    |  100    | 2.45%| 0.32%
-| Chinese_handwriting    | None    | 100     |  1.70%   |0.18% 
-| Chinese_handwriting    | Affine    | 100     |1.85% |0.24％
-| Chinese_handwriting    | Translation    | 100     |1.95％ ｜0.22％
+
+
+
+
 
 ### Hyperparameter Tuning
-|  Dataset| learning_rate| Traning Epoch |Top1 Error Rate|Top 5 Error Rate|
-| -------- | -------- | -------- |-------|-----|
-| Assamese_handwriting    | 0.01  |  100    |1.94%|0.18%
-| Assamese_handwriting    | 0.05   |   100   | 2.30% |0.30%
-| Assamese_handwriting    | 0.1   |   100   | 2.30% |0.30%
-| Chinese_handwriting    | 0.01  | 100     |     | 
-| Chinese_handwriting    | 0.05    | 100     |    |
-| Chinese_handwriting    | 0.1   | 100     |    |
+| Dataset              | learning_rate | Traning Epoch | Top1 Error Rate | Top 5 Error Rate |
+| -------------------- | ------------- | ------------- | --------------- | ---------------- |
+| Assamese_handwriting |               |               |                 |                  |
+| Assamese_handwriting |               |               |                 |                  |
+| Assamese_handwriting |               |               |                 |                  |
+| Chinese_handwriting  |               |               |                 |                  |
+| Chinese_handwriting  |               |               |                 |                  |
+| Chinese_handwriting  |               |               |                 |                  |
 
 
 
@@ -87,7 +87,7 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 The code can also generate a confusion matrix. 
 
-![](\img\confusion matrix.jpg)
+![confusion matrix](\img\confusion matrix.jpg)
 
 ## Reflection
 
