@@ -87,7 +87,7 @@ The experiment results are evaluated with top 1 error rate and top 5 error rate.
 
 The code can also generate a confusion matrix. 
 
-![confusion matrix](/img/confusion matrix.jpg)
+![confusion matrix](/img/confusion-matrix.jpg)
 
 ## Reflection
 
