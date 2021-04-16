@@ -11,9 +11,9 @@ Convolutional neural networks are commonly used in deep learning tasks that invo
 ## Model Architecture
 The model described in the paper is called DeepCNet. Its main idea is to retain spatial information by applying slow max-pooling. It implements slow max-pooling by construct a deep CNN called DeepCNet and apply max-pooling after each convolution layer.
 
-There are two parameters to describe the structure of DeepCNet (l,k): there are \(l+1\) layers with convolutional filters separated by \(l\) layers of \(2\times 2\) max-pooling, and there are \(nk\) convolutional filters in the \(n^{th}\) layer. As for activation function, ReLU is used for hidden layers and softmax is used for the output layer. The filter size of the first layer is \(3 \times 3\), and for the rest of the layers it's \(2\times2\).
+There are two parameters to describe the structure of DeepCNet (l,k): there are $$l+1$$ layers with convolutional filters separated by $$l$$ layers of $$2\times 2$$ max-pooling, and there are $$nk$$ convolutional filters in the $$n^{th}$$ layer. As for activation function, ReLU is used for hidden layers and softmax is used for the output layer. The filter size of the first layer is $$3 \times 3$$, and for the rest of the layers it's $$2\times2$$.
 
-The figure below shows a DeepCNet with \(l=5\)​.
+The figure below shows a DeepCNet with $$l=5$$​.
 
 ![l= 5](/img/l=5.png)
 

@@ -1,17 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-16 15:12:17
- * @LastEditTime: 2021-04-16 15:16:26
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-16 15:28:55
+ * @LastEditors: your name
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Jonny\Documents\deeplearning-blog\_includes\head.html
 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-      }
-    });
-  </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+    <!-- for mathjax support -->
+    {% if page.usemathjax %}
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+      </script>
+      <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {% endif %}
+    
